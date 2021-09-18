@@ -42,6 +42,12 @@ like this in your .xinitrc:
     exec dwm
 
 
+Configuration
+-------------
+The configuration of dwm is done by creating a custom config.h
+and (re)compiling the source code.
+
+
 Patches
 -------
 dwm-actualfullscreen-20191112-cb3f58a.diff
@@ -49,10 +55,3 @@ dwm-fibonacci-6.2.diff
 dwm-fullgaps-6.2.diff
 dwm-push-20201112-61bb8b2.diff
 dwm-systray-6.2.diff
-
-
-
-Configuration
--------------
-The configuration of dwm is done by creating a custom config.h
-and (re)compiling the source code.
