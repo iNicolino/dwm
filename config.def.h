@@ -69,8 +69,8 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
-static const char *volumeinc[] = { "pactl", "set-sink-volume", "0", "+5%", NULL };
-static const char *volumedec[] = { "pactl", "set-sink-volume", "0", "-5%", NULL };
+static const char *volumeinc[] = { "incVol", NULL };
+static const char *volumedec[] = { "decVol", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
