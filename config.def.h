@@ -72,9 +72,11 @@ static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
 static const char *volumeinc[] = { "incVol", NULL };
 static const char *volumedec[] = { "decVol", NULL };
+static const char *screenshot[] = { "flameshot", "gui", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ 0,                            XK_Print,  spawn,          {.v = screenshot} },
 	{ MODKEY,                       XK_bracketright, spawn,    {.v = volumeinc} },
 	{ MODKEY,                       XK_bracketleft,  spawn,    {.v = volumedec} },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
