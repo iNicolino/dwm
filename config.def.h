@@ -35,8 +35,8 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "Steam",    NULL,       NULL,       0,            1,           -1 },
-	{ "Steam",    NULL,       "Steam",    0,            0,           -1 },
+	{ "steam",    NULL,       NULL,       0,            1,           -1 },
+	{ "steam",    NULL,       "Steam",    0,            0,           -1 },
 };
 
 /* layout(s) */
@@ -73,6 +73,7 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34
 static const char *volumeinc[] = { "incVol", NULL };
 static const char *volumedec[] = { "decVol", NULL };
 static const char *screenshot[] = { "flameshot", "gui", NULL };
+static const char *spawnemacs[] = { "emacsclient", "-c", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -80,6 +81,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_bracketright, spawn,    {.v = volumeinc} },
 	{ MODKEY,                       XK_bracketleft,  spawn,    {.v = volumedec} },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_m,      spawn,          {.v = spawnemacs } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_s,      togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
